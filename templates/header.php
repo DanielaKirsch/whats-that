@@ -48,9 +48,11 @@
       <div class="row navbar">
              <?php
                if(empty($user)) { ?>
-                    <div><a href="#" class="login">Login</a></div>
-                    <div class="clear"></div>
+                   
+
                     <div><a href="#" class="register">Register</a></div>
+
+                     <div><a href="#" class="login">Login</a></div>
                 <?php } ?>
             <?php
                if($user) { ?>
@@ -62,12 +64,16 @@
                <img src="/img/logo.png" class="mylogo">
             </a>
       
+      <div class="clear"></div>
+        <div class="searchtext">Looking for something?</div> 
+        <div class="clear"></div>
+        <div class="append field searchfield">
+                   
+                     <input class="wide text input" type="email" placeholder="Find pictures!" value="Find pictures!">
+                     <div class="medium primary btn"><a href="#">Go</a></div>
+         </div>
+            
         
-            
-
-            
-            <!-- <li class="field"><input class="search input" type="search" placeholder="Search"></li>
-          -->
 
    </div>
 

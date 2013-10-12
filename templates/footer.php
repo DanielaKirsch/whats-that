@@ -35,6 +35,9 @@
 
 	<script src="/js/libs/ui/jquery-ui.min.js"></script>
 
+	<script src="/js/libs/jquery.isotope.min.js"></script>
+	
+
 	<!--
 	gumby.min.js contains gumby.js, all UI modules and gumby.init.js
 	<script src="js/libs/gumby.min.js"></script> -->

@@ -2585,7 +2585,7 @@ table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr
 
 .ie9 .radio.checked i, .ie9 .checkbox.checked i { top: 0; }
 
-.navbar { min-height: 190px; background-color: transparent; background-image: url("/img/trennstrich.png"); background-position: -18px 171px; background-repeat: no-repeat; }
+.navbar { min-height: 140px; background-color: transparent; background-image: url("/img/trennstrich.png"); background-position: -18px 131px; background-repeat: no-repeat; }
 
 body { background-image: url("/img/bg.png"); }
 
@@ -2593,14 +2593,50 @@ body { background-image: url("/img/bg.png"); }
 
 .clear { clear: both; }
 
-.login { background-image: url("/img/btn_login_inactive.png"); width: 100px; height: 30px; display: block; text-indent: -9999px; margin-top: 20px; }
-.login:hover { background-image: url("/img/btn_login_active.png"); }
+.login { background-image: url("/img/btn_login_active.png"); width: 100px; height: 30px; display: block; text-indent: -9999px; margin-top: 20px; margin-right: 10px; }
+.login:hover { background-image: url("/img/btn_login_inactive.png"); }
 
-.register { background-image: url("/img/btn_register_inactive.png"); width: 100px; display: block; height: 30px; text-indent: -9999px; margin-top: 10px; }
+.register { background-image: url("/img/btn_register_inactive.png"); width: 100px; display: block; height: 30px; text-indent: -9999px; margin-top: 20px; }
 .register:hover { background-image: url("/img/btn_register_active.png"); }
 
-.mylogo { margin: 0 auto; display: block; }
+.mylogo { margin: 0 auto; display: block; position: absolute; top: 20px; }
 
-.lead { font-family: 'Asap', sans-serif; font-size: 28px; font-weight: bold; }
+.lead { font-family: 'Asap', sans-serif; font-size: 22px; font-weight: bold; margin-bottom: 20px; }
 
 span { font-family: 'Asap', sans-serif; }
+
+.isotope-item { z-index: 2; }
+
+.isotope-hidden.isotope-item { pointer-events: none; z-index: 1; }
+
+.element img, .element a, .element { width: 180px; display: block; height: 180px; }
+
+.element { float: left; overflow: hidden; margin-right: 5px; }
+
+span.thefilter { float: left; margin-top: 22px; margin-right: 40px; }
+
+#filters li { float: left; margin-right: 10px; }
+#filters a { background-repeat: no-repeat; width: 66px; height: 78px; display: block; text-indent: -9999px; }
+#filters .all { background-image: url("/img/btn_category_all_inactive.png"); }
+#filters .all:hover, #filters .all.active { background-image: url("/img/btn_category_all_active.png"); }
+#filters .cats { background-image: url("/img/btn_category_cats_inactive.png"); }
+#filters .cats:hover, #filters .cats.active { background-image: url("/img/btn_category_cats_active.png"); }
+#filters .dogs { background-image: url("/img/btn_category_dogs_active.png"); }
+#filters .dogs:hover, #filters .dogs.active { background-image: url("/img/btn_category_dogs_inactive.png"); }
+#filters .trees { background-image: url("/img/btn_category_trees_inactive.png"); }
+#filters .trees:hover, #filters .trees.active { background-image: url("/img/btn_category_trees_active.png"); }
+#filters .thing { background-image: url("/img/btn_category_thing_inactive.png"); }
+#filters .thing:hover, #filters .thing.active { background-image: url("/img/btn_category_thing_active.png"); }
+#filters .tools { background-image: url("/img/btn_category_tools_inactive.png"); }
+#filters .tools:hover, #filters .tools.active { background-image: url("/img/btn_category_tools_active.png"); }
+#filters .cars { background-image: url("/img/btn_category_tools_inactive.png"); }
+#filters .cars:hover, #filters .cars.active { background-image: url("/img/btn_category_tools_active.png"); }
+
+.uploadfooter { position: fixed; left: 0px; bottom: 0px; height: 75px; width: 100%; background: #ccd46a; z-index: 9999; }
+
+.searchfield a { background-color: #0b5264; border-color: #0b5264; }
+
+.searchtext { position: absolute; margin-left: 490px; font-weight: bold; font-family: 'Asap', sans-serif; font-size: 19px; margin-top: 34px; }
+
+.searchfield { width: 290px; float: right; }
+.searchfield input { margin-top: 30px !important; margin-left: 50px !important; }

@@ -32,7 +32,7 @@ Gumby.ready(function() {
 	    url: "http://dev-whats-that.de/api/pictures",
 	    dataType: "json"
 	}).success(function(data){
-		console.log(data);
+		
 		
 		for (var i=0;i<data.length;i++) {
 
@@ -43,12 +43,12 @@ Gumby.ready(function() {
 				tagged = 'tagged';
 			}
 
-			string = '<div class="columns image element '+data[i]['category']+' '+tagged+'"><a href="#" class="modal1"><img src="upload/'+data[i]['url']+'"></a><div class="title">'+data[i]['title']+'</div></div>';
+			string = '<div class="element '+data[i]['category']+' '+tagged+'"><a href="#" class="modal1"><img src="upload/'+data[i]['url']+'"></a><div class="title">'+data[i]['title']+'</div></div>';
 
 			$('#allpictures').append(string);
 		}
 		
-
+		createIsotope();
 	    
 	});
 
@@ -88,6 +88,25 @@ Gumby.ready(function() {
 	//         });
 	//     }
 	// });
+	
+	function createIsotope() {
+			// cache container
+			var $container = $('#allpictures');
+			// initialize isotope
+			$container.isotope({
+			  // options...
+			});
+
+			// filter items when filter link is clicked
+			$('#filters a').click(function(){
+			  var selector = $(this).attr('data-filter');
+			  $('#filters a').removeClass('active');
+			  $(this).addClass('active');
+			  $container.isotope({ filter: selector });
+			  return false;
+			});
+
+	}
 
 
 	// placeholder polyfil

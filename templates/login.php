@@ -17,15 +17,19 @@
 <div class="row"> 
   <h1 class="lead">Do you know what these things are?</h1>
   <div class="row">
-    <span>Select a category:</span>
-    <ul> 
+    <span class="thefilter">Select a category:</span>
 
-      <li>
-          <a href="#" class="cat_all"></a>
-
-      </li>
-
+    <ul id="filters">
+      <li><a href="#" data-filter="*" class="all active">show all</a></li>
+      <li><a href="#" data-filter=".Dogs" class="dogs">Dogs</a></li>
+      <li><a href="#" data-filter=".Cats" class="cats">Cats</a></li>
+      <li><a href="#" data-filter=".Trees" class="trees">Trees</a></li>
+      <li><a href="#" data-filter=".Thing" class="thing">Thing</a></li>
+      <li><a href="#" data-filter=".Tools" class="tools">Tools</a></li>
+      <li><a href="#" data-filter=".Cars" class="cars">Cars</a></li>
     </ul>
+
+    
   </div>
 </div>
 
@@ -76,9 +80,13 @@
              
               <div class="picker">
                 <select name="category">
-                  <option>Thingy</option>
-                  <option>Tree</option>
+                  <option>Thing</option>
+                  <option>Trees</option>
                   <option>Cats</option>
+                  <option>Dogs</option>
+                  <option>Tools</option>
+                   <option>Cars</option>
+                 
                 </select>
               </div>
 
@@ -99,6 +107,13 @@
 
 
 
+<div class="uploadfooter">
+  <div class="row">
+    <div class="lead newlead">Tell me what this is!</div>
+    <div class="belowlead">Upload a picture of something you don't know and get an answer</div>
 
+    <a href="#" class="uploadpicture"></a>
+  </div>
+</div>
 
 <? require 'footer.php' ?>

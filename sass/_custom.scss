@@ -1,10 +1,10 @@
 // Your custom SCSS should be written here...
 
 .navbar {
-	min-height: 190px;
+	min-height: 140px;
 	background-color: transparent;
 	background-image: url('/img/trennstrich.png');
-	background-position: -18px 171px;
+	background-position: -18px 131px;
 	background-repeat: no-repeat;
 }
 body {
@@ -18,15 +18,16 @@ body {
 	clear: both;
 }
 .login {
-background-image: url('/img/btn_login_inactive.png');
+background-image: url('/img/btn_login_active.png');
 width: 100px;
 height: 30px;
 display: block;
 text-indent: -9999px;
 margin-top: 20px;
+margin-right: 10px;
 	
 	&:hover {
-		background-image: url('/img/btn_login_active.png');
+		background-image: url('/img/btn_login_inactive.png');
 	}
 
 }
@@ -36,7 +37,7 @@ margin-top: 20px;
 	display: block;
 height: 30px;
 text-indent: -9999px;
-margin-top: 10px;
+margin-top: 20px;
 	&:hover {
 		background-image: url('/img/btn_register_active.png');
 	}
@@ -44,15 +45,141 @@ margin-top: 10px;
 .mylogo {
 	margin: 0 auto;
 	display: block;
-	
+	position: absolute;
+	top: 20px;
 }
 
 .lead {
 	font-family: 'Asap', sans-serif;
-	font-size: 28px;
+	font-size: 22px;
 	font-weight: bold;
+	margin-bottom: 20px;
 }
 
 span {
 	font-family: 'Asap', sans-serif;
+}
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+.element img, .element a, .element {
+	width: 180px;
+	display: block;
+	height: 180px;
+}
+.element {
+	float: left;
+	overflow: hidden;
+	margin-right: 5px;
+}
+
+span.thefilter {
+	float: left;
+	margin-top: 22px;
+	margin-right: 40px;
+}
+
+#filters {
+	li {
+		float: left;
+		margin-right: 10px;
+	}
+	a {
+		background-repeat: no-repeat;
+		width: 66px;
+		height: 78px;
+		display: block;
+		text-indent: -9999px;
+
+	}
+	.all {
+		background-image: url('/img/btn_category_all_inactive.png');
+		
+		&:hover, &.active {
+			background-image: url('/img/btn_category_all_active.png');
+		}
+	}
+	.cats{
+		background-image: url('/img/btn_category_cats_inactive.png');
+
+		&:hover, &.active {
+			background-image: url('/img/btn_category_cats_active.png');
+		}
+	}
+
+	.dogs{
+		background-image: url('/img/btn_category_dogs_active.png');
+		&:hover, &.active {
+			background-image: url('/img/btn_category_dogs_inactive.png');
+		}
+	}
+
+	.trees{
+		background-image: url('/img/btn_category_trees_inactive.png');
+		&:hover, &.active {
+			background-image: url('/img/btn_category_trees_active.png');
+		}
+	}
+
+	.thing {
+		background-image: url('/img/btn_category_thing_inactive.png');
+		&:hover, &.active {
+			background-image: url('/img/btn_category_thing_active.png');
+		}
+	}
+	.tools{
+		background-image: url('/img/btn_category_tools_inactive.png');
+		&:hover, &.active {
+			background-image: url('/img/btn_category_tools_active.png');
+		}
+	}
+	.cars{
+		background-image: url('/img/btn_category_tools_inactive.png');
+		&:hover, &.active {
+			background-image: url('/img/btn_category_tools_active.png');
+		}
+	}
+
+
+
+}
+
+
+.uploadfooter {
+	position:fixed;
+   left:0px;
+   bottom:0px;
+   height:75px;
+   width:100%;
+   background:#ccd46a;
+   z-index: 9999;
+
+}
+.searchfield a {
+	background-color: #0b5264;
+	border-color: #0b5264;
+}
+.searchtext {
+	position: absolute;
+margin-left: 490px;
+font-weight: bold;
+font-family: 'Asap', sans-serif;
+font-size: 19px;
+margin-top: 34px;
+}
+.searchfield {
+	width: 290px;
+	float: right;
+
+	input {
+		margin-top: 30px !important;
+		margin-left: 50px !important;
+	}
 }
