@@ -20,7 +20,7 @@
               <label class="inline" for="email">Email</label>
               <input class="email input" type="text" name="email" id="email" value="<?=$email_value?>" placeholder="Email" />
             </li>
-              <li class="field">
+            <li class="field">
               <label class="inline" for="password">Password</label>
               <input class="password input" type="password" name="password" id="password" placeholder="Password" />
             </li>
@@ -38,8 +38,35 @@
 <div class="row"> 
   <h1 class="lead">Upload your photo</h1>
   <div class="row">
-    <p>Hello About!</p>
+    
+    <form action="/api/upload" method="POST" enctype="multipart/form-data">
+    
+          <ul>
+          
+            <li class="field">
+              
+              <input class="file input" type="file" name="uploadfile" id="uploadfile" value="" placeholder="File upload" />
+            </li>
+            <li class="field">
+             
+              <div class="picker">
+                <select name="category">
+                  <option>Thingy</option>
+                  <option>Tree</option>
+                  <option>Cats</option>
+                </select>
+              </div>
+
+            </li>
+           <li>
+              <div class="medium default btn"><input type="submit" value="Upload" /></div>
+           </li>
+          </ul>
+      </form>
+
+
   </div>
+
 </div>
 
 

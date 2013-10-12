@@ -9,7 +9,7 @@ $app = new \Slim\Slim();
 $app->get('/pictures', 'getPictures');
 $app->post('/createUser', 'createUser');
 
-
+$app->post('/upload', 'uploadFile');
 
 $app->run();
 
@@ -38,7 +38,7 @@ function createUser() {
   	$password = $request->post('password');
 
   $sql = "insert into user (uid, name, email, password) values (NULL, '".$name."', '".$email."', '".$password."')";
-  print $sql;
+  
 
   try {
     $db = getConnection();
@@ -52,6 +52,37 @@ function createUser() {
     echo '{"error":{"text":'. $e->getMessage() .'}}'; 
   }
 }
+
+function uploadFile() {
+
+  $app1 = \Slim\Slim::getInstance();
+  $request = $app1->request();
+
+  move_uploaded_file($_FILES['uploadfile']['tmp_name'], "/var/www/dev-whats-that.de/upload/".$_FILES['uploadfile']['name']);
+
+  $title = "";
+  $url = $_FILES['uploadfile']['name'];
+  $category = $request->post('category');
+
+  $sql = "insert into pictures (pid, title, url, category) values (NULL, '".$title."', '".$url."', '".$category."')";
+  
+  
+  try {
+    $db = getConnection();
+    $stmt = $db->prepare($sql);  
+    $stmt->execute();
+    $db = null;
+    $app1->redirect('/');
+
+  } catch(PDOException $e) {
+    
+    echo '{"error":{"text":'. $e->getMessage() .'}}'; 
+  }
+}
+
+
+
+
 
 function getConnection() {
 	$dbhost="127.0.0.1";
