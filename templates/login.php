@@ -70,6 +70,18 @@
 </div>
 
 
+<div class="row"> 
+  <div class="four columns image">
+    
+  </div>
+</div>
+
+
+
+<input type="text" id="artist" />
+
+
+
 
 
 <? require 'footer.php' ?>

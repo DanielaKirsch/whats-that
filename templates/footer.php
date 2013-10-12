@@ -33,6 +33,8 @@
 	<script src="/js/libs/ui/jquery.validation.js"></script>
 	<script src="/js/libs/gumby.init.js"></script>
 
+	<script src="/js/libs/ui/jquery-ui.min.js"></script>
+
 	<!--
 	gumby.min.js contains gumby.js, all UI modules and gumby.init.js
 	<script src="js/libs/gumby.min.js"></script> -->

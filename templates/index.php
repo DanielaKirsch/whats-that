@@ -12,4 +12,9 @@
 <p>Hi <?=$user?>
 <?endif;?>
 
+
+
+
+
+
 <? require 'footer.php' ?>
