@@ -43,15 +43,42 @@
   
 
 <body>
+   
+   <div class="navbar" id="nav1">
+      <div class="row">
+         <a class="toggle" gumby-trigger="#nav1 &gt; .row &gt; ul" href="#"><i class="icon-menu"></i></a>
+         <h1 class="four columns logo">
+            <a href="#">
+               <img src="img/thingy.png" gumby-retina="">
+            </a>
+         </h1>
+         <ul class="eight columns">
+            <li><a href="/">Home</a></li>
+            <li>
+               <a href="/categories">Category</a>
+               <div class="dropdown">
+                  <ul>
+                     <li><a href="#">Trees</a></li>
+                     <li><a href="#">Cats</a></li>
+                     <li><a href="#">Thingy</a></li>
+                  </ul>
+               </div>
+            </li>
+            <li><a href="/about">About</a></li>
 
-<a href="/">Home</a> | <a href="/about">About</a> | <a href="/level/contact">Deep Contact</a>
+             <?php
+               if(empty($user)) { ?>
+                     <li><a href="/register">Register</a></li>
+                <?php } ?>
+            <?php
+               if($user) { ?>
+                     <li><a href="/profile">Profile</a></li>
+                     <li><a href="/logout">Logout</a></li>
+              <?php }
+            ?>
+            <li class="field"><input class="search input" type="search" placeholder="Search"></li>
+         </ul>
+      </div>
+   </div>
 
-<?if (empty($user)):?>
-   | <a href="/login" id="login">Login</a>
-<?else:?>
-   | <a href="/private/about">Private About</a>
-   | <a href="/private/goodstuff">Private Good Stuff</a>
-   | <a href="/logout">Logout</a>
-<?endif;?>
-
-<hr/>
+<!-- /header -->

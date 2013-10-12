@@ -1,10 +1,12 @@
 <? require 'header.php' ?>
 
 <div class="row">	
-	<h1 class="lead">You have logged out!</h1>
+	<h1 class="lead">Hello</h1>
 	<div class="row">
-		<p>Hello Logged out!</p>
+		<p>Hello Categories!</p>
 	</div>
 </div>
+
+
 
 <? require 'footer.php' ?>
