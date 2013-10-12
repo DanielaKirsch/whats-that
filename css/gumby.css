@@ -2621,7 +2621,7 @@ span { font-family: 'Asap', sans-serif; }
 
 .element img, .element a, .element { width: 180px; display: block; height: 180px; }
 
-.element { float: left; overflow: hidden; margin-right: 5px; }
+.element { float: left; overflow: hidden; margin-right: 5px; margin-bottom: 5px; }
 
 span.thefilter { float: left; margin-top: 22px; margin-right: 40px; }
 
@@ -2631,8 +2631,8 @@ span.thefilter { float: left; margin-top: 22px; margin-right: 40px; }
 #filters .all:hover, #filters .all.active { background-image: url("/img/btn_category_all_active.png"); }
 #filters .cats { background-image: url("/img/btn_category_cats_inactive.png"); }
 #filters .cats:hover, #filters .cats.active { background-image: url("/img/btn_category_cats_active.png"); }
-#filters .dogs { background-image: url("/img/btn_category_dogs_active.png"); }
-#filters .dogs:hover, #filters .dogs.active { background-image: url("/img/btn_category_dogs_inactive.png"); }
+#filters .dogs { background-image: url("/img/btn_category_dogs_inactive.png"); }
+#filters .dogs:hover, #filters .dogs.active { background-image: url("/img/btn_category_dogs_active.png"); }
 #filters .trees { background-image: url("/img/btn_category_trees_inactive.png"); }
 #filters .trees:hover, #filters .trees.active { background-image: url("/img/btn_category_trees_active.png"); }
 #filters .thing { background-image: url("/img/btn_category_thing_inactive.png"); }
@@ -2664,3 +2664,15 @@ span.thefilter { float: left; margin-top: 22px; margin-right: 40px; }
 
 /**** disabling Isotope CSS3 transitions ****/
 .isotope.no-transition, .isotope.no-transition .isotope-item, .isotope .isotope-item.no-transition { -webkit-transition-duration: 0s; -moz-transition-duration: 0s; -ms-transition-duration: 0s; -o-transition-duration: 0s; transition-duration: 0s; }
+
+#modal1 img { width: 430px; height: 430px; margin-right: 10px; }
+
+#wikipedia { width: 240px; }
+
+.search.output { display: block; width: 235px; margin-right: 35px; float: right; border: 1px solid gray; padding: 5px 20px; }
+.search.output li { padding-bottom: 0.5em; padding-top: 0.5em; cursor: pointer; border-bottom: 1px solid lightgray; }
+.search.output li a { font-family: 'Asap', sans-serif; color: #919c12; padding-left: 5px; }
+.search.output li:hover { background-color: #919c12; }
+.search.output li:hover a { color: #fff; }
+
+.whatisit { margin-bottom: 20px; }

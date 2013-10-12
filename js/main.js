@@ -23,14 +23,14 @@ Gumby.ready(function() {
 	                'search': request.term
 	            },
 	            success: function(data) {
-	                //response(data[1]);
+	               
 	                asOutput.empty();
 			            	asOutputLayer.addClass('active');
-			            	// check if there is a search result
-			         				
+			            	
 				                response( $.map( data[1], function( item ) {
+
 				                	return {
-				                		label: item.label
+				                		label: item
 				                		
 						              }
 					            }));

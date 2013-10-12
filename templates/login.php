@@ -4,12 +4,13 @@
 <div class="modal" id="modal1">
     <div class="content">
       <a class="close switch active" gumby-trigger="|#modal1"><i class="icon-cancel"></i></a>
-      <div class="row">
+      <div>
         <div class="ten columns centered text-center">
         
         </div>
-        <input type="text" id="wikipedia" />
-
+        <div class="field">
+            <input type="text" id="wikipedia" class="text input" />
+        </div>
         <div class="search output">
           <ul>
 
@@ -97,7 +98,7 @@
   </div>
 
 
-<div class="row"> 
+<div class="row whatisit"> 
   <h1 class="lead">Do you know what these things are?</h1>
   <div class="row">
     <span class="thefilter">Select a category:</span>
