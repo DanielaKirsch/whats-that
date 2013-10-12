@@ -24,15 +24,6 @@ $app->hook('slim.before.dispatch', function() use ($app) {
 });
 
 
-
-$app->get("/about", function () use ($app) {
-   $app->render('about.php');
-});
-
-$app->get("/categories", function () use ($app) {
-   $app->render('categories.php');
-});
-
 $app->get("/register", function () use ($app) {
    $app->render('register.php');
 });
@@ -112,9 +103,7 @@ $app->post("/", function () use ($app) {
 
 // inner websites
 
-$app->get("/profile", $authenticate($app), function () use ($app) {
-   $app->render('profile.php');
-});
+
 
 
 

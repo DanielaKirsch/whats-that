@@ -20,8 +20,8 @@ function getPictures() {
 		$stmt = $db->query($sql);  
 		$pictures = $stmt->fetchAll(PDO::FETCH_OBJ);
 		$db = null;
-		echo '{"pictures": ' . json_encode($pictures) . '}';
-		
+		echo json_encode($pictures);
+
 
 
 	} catch(PDOException $e) {

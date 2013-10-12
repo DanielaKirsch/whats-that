@@ -1,22 +1,47 @@
 <? require 'header.php' ?>
 
-<?if(!empty($error)):?>
-<p class="error"><?=$error?></p>
-<?endif;?>
+
+<div class="modal" id="modal1">
+    <div class="content">
+      <a class="close switch active" gumby-trigger="|#modal1"><i class="icon-cancel"></i></a>
+      <div class="row">
+        <div class="ten columns centered text-center">
+          <h2>This is a modal.</h2>
+          <p>Gumby modals are easy to make using Toggles &amp; Switches. The <span class="label default">.modal</span> class already has the required styles which you can open and close using Toggles &amp; Switches.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 <div class="row"> 
-  <h1 class="lead">Hey! Wonderful you're here!</h1>
+  <h1 class="lead">Do you know what these things are?</h1>
   <div class="row">
-    <p>Please login</p>
+    <span>Select a category:</span>
+    <ul> 
+
+      <li>
+          <a href="#" class="cat_all"></a>
+
+      </li>
+
+    </ul>
   </div>
 </div>
+
+
+
+<div class="row" id="allpictures"> </div>
+
+
+
 
 <div class="row">
       <div class="three columns">
             <form action="/" method="POST">
-    			<ul>
-    			
-    				<li class="field">
+          <ul>
+          
+            <li class="field">
               <label class="inline" for="email">Email</label>
               <input class="email input" type="text" name="email" id="email" value="<?=$email_value?>" placeholder="Email" />
             </li>
@@ -24,11 +49,11 @@
               <label class="inline" for="password">Password</label>
               <input class="password input" type="password" name="password" id="password" placeholder="Password" />
             </li>
-    			 <li>
+           <li>
               <div class="medium default btn"><input type="submit" value="Login" /></div>
            </li>
           </ul>
-    		</form>
+        </form>
       </div>
       <div class="nine columns">
         
@@ -70,15 +95,7 @@
 </div>
 
 
-<div class="row"> 
-  <div class="four columns image">
-    
-  </div>
-</div>
-
-
-
-<input type="text" id="artist" />
+<input type="text" id="wikipedia" />
 
 
 

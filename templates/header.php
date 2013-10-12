@@ -40,45 +40,35 @@
 
    <script src="/js/libs/modernizr-2.6.2.min.js"></script>
 
-  
+  <link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
 
 <body>
    
-   <div class="navbar" id="nav1">
-      <div class="row">
-         <a class="toggle" gumby-trigger="#nav1 &gt; .row &gt; ul" href="#"><i class="icon-menu"></i></a>
-         <h1 class="four columns logo">
-            <a href="#">
-               <img src="img/thingy.png" gumby-retina="">
-            </a>
-         </h1>
-         <ul class="eight columns">
-            <li><a href="/">Home</a></li>
-            <li>
-               <a href="/categories">Category</a>
-               <div class="dropdown">
-                  <ul>
-                     <li><a href="#">Trees</a></li>
-                     <li><a href="#">Cats</a></li>
-                     <li><a href="#">Thingy</a></li>
-                  </ul>
-               </div>
-            </li>
-            <li><a href="/about">About</a></li>
-
+   
+      <div class="row navbar">
              <?php
                if(empty($user)) { ?>
-                     <li><a href="/register">Register</a></li>
+                    <div><a href="#" class="login">Login</a></div>
+                    <div class="clear"></div>
+                    <div><a href="#" class="register">Register</a></div>
                 <?php } ?>
             <?php
                if($user) { ?>
-                     <li><a href="/profile">Profile</a></li>
-                     <li><a href="/logout">Logout</a></li>
+                     
+                     <div><a href="/logout">Logout</a></div>
               <?php }
             ?>
-            <li class="field"><input class="search input" type="search" placeholder="Search"></li>
-         </ul>
-      </div>
+            <a href="#">
+               <img src="/img/logo.png" class="mylogo">
+            </a>
+      
+        
+            
+
+            
+            <!-- <li class="field"><input class="search input" type="search" placeholder="Search"></li>
+          -->
+
    </div>
 
 <!-- /header -->
