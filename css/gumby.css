@@ -2639,8 +2639,8 @@ span.thefilter { float: left; margin-top: 22px; margin-right: 40px; }
 #filters .thing:hover, #filters .thing.active { background-image: url("/img/btn_category_thing_active.png"); }
 #filters .tools { background-image: url("/img/btn_category_tools_inactive.png"); }
 #filters .tools:hover, #filters .tools.active { background-image: url("/img/btn_category_tools_active.png"); }
-#filters .cars { background-image: url("/img/btn_category_tools_inactive.png"); }
-#filters .cars:hover, #filters .cars.active { background-image: url("/img/btn_category_tools_active.png"); }
+#filters .cars { background-image: url("/img/btn_category_cars_inactive.png"); }
+#filters .cars:hover, #filters .cars.active { background-image: url("/img/btn_category_cars_active.png"); }
 
 .uploadpicture { background-image: url("/img/btn_upload_inactive_kleiner.png"); width: 256px; height: 50px; float: right; margin-top: -50px; }
 .uploadpicture:hover { background-image: url("/img/btn_upload_active_kleiner.png"); }

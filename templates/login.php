@@ -1,5 +1,16 @@
 <? require 'header.php' ?>
 
+<div class="modal" id="modalbadges">
+    <div class="content">
+      <a class="close switch active" gumby-trigger="|#modal1"><i class="icon-cancel"></i></a>
+      <div>
+       
+        <img src="/img/badges.png">
+       
+      </div>
+    </div>
+  </div>
+
 
 <div class="modal" id="modal1">
     <div class="content">

@@ -59,20 +59,20 @@
    
       <div class="row navbar">
              <?php
-               if(empty($user)) { ?>
+               //if(empty($user)) { ?>
                    
 
-                    <div><a href="#" class="register">Register</a></div>
+                    <!-- <div><a href="#" class="register">Register</a></div>
 
-                     <div><a href="#" class="login">Login</a></div>
-                <?php } ?>
+                     <div><a href="#" class="login">Login</a></div> -->
+                <?php //} ?>
             <?php
-               if($user) { ?>
+              // if($user) { ?>
                     
                      <div><a href="/logout" class="logout">Logout</a></div>
-                      <div><a href="/profile" class="profile">Profile</a></div>
+                      <div><a href="#" class="profile">Profile</a></div>
                        <div class="your_name">Hi Daniela!</div>
-              <?php }
+              <?php //}
             ?>
             <a href="/">
                <img src="/img/logo.png" class="mylogo">

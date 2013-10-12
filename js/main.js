@@ -107,6 +107,15 @@ Gumby.ready(function() {
   		
 	});
 
+	 $('.profile').click(function(event) {
+  		event.preventDefault();
+  		
+  		$('#modalbadges').css('opacity',1);
+  		$('#modalbadges').css('z-index','999');
+  		$('#modalbadges .content').css('opacity',1);
+  		
+	});
+
 
 	// $("#artist").autocomplete({
 	//     source: function(request, response) {

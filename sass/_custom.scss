@@ -186,9 +186,9 @@ span.thefilter {
 		}
 	}
 	.cars{
-		background-image: url('/img/btn_category_tools_inactive.png');
+		background-image: url('/img/btn_category_cars_inactive.png');
 		&:hover, &.active {
-			background-image: url('/img/btn_category_tools_active.png');
+			background-image: url('/img/btn_category_cars_active.png');
 		}
 	}
 }
