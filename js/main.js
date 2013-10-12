@@ -8,11 +8,12 @@ Gumby.ready(function() {
 
 	
 
+	var asOutput = $('.search.output ul');
+	var asOutputLayer = $('.search.output');
 
-
-	$("#artist").autocomplete({
+	$("#wikipedia").autocomplete({
 	    source: function(request, response) {
-	        console.log(request.term);
+	        //console.log(request.term);
 	        $.ajax({
 	            url: "http://en.wikipedia.org/w/api.php",
 	            dataType: "jsonp",
@@ -22,11 +23,27 @@ Gumby.ready(function() {
 	                'search': request.term
 	            },
 	            success: function(data) {
-	                response(data[1]);
+	                //response(data[1]);
+	                asOutput.empty();
+			            	asOutputLayer.addClass('active');
+			            	// check if there is a search result
+			         				
+				                response( $.map( data[1], function( item ) {
+				                	return {
+				                		label: item.label
+				                		
+						              }
+					            }));
+
 	            }
 	        });
 	    }
-	});
+	})
+	.data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+		 asOutput.append('<li><a href="#" title="'+item.label+'">'+item.label+'</a></li>');
+		 return $( "" )
+	};
+
 
 	$.ajax({
 	    url: "http://dev-whats-that.de/api/pictures",

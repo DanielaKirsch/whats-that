@@ -56,8 +56,10 @@
                 <?php } ?>
             <?php
                if($user) { ?>
-                     
-                     <div><a href="/logout">Logout</a></div>
+                    
+                     <div><a href="/logout" class="logout">Logout</a></div>
+                      <div><a href="/profile" class="profile">Profile</a></div>
+                       <div class="your_name">Hi Daniela!</div>
               <?php }
             ?>
             <a href="/">

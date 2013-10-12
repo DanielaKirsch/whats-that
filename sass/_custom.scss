@@ -10,13 +10,57 @@
 body {
 	background-image: url('/img/bg.png');
 }
-.login, .register {
+.login, .register, .logout, .profile {
 	top: 0;
 	float: right;
 }
 .clear {
 	clear: both;
 }
+.logout {
+background-image: url('/img/btn_logout_active.png');
+width: 85px;
+height: 26px;
+display: block;
+text-indent: -9999px;
+margin-top: 20px;
+
+	
+	&:hover {
+		background-image: url('/img/btn_logout_inactive.png');
+	}
+
+}
+
+.ui-helper-hidden-accessible {
+	display: none;
+}
+
+.your_name {
+	float: right;
+font-size: 14px;
+font-weight: bold;
+color: #0b5264;
+margin-top: 22px;
+margin-right: 10px;
+}
+
+.profile {
+background-image: url('/img/btn_profile_inactive.png');
+width: 85px;
+height: 26px;
+display: block;
+text-indent: -9999px;
+margin-top: 20px;
+margin-right: 10px;
+	
+	&:hover {
+		background-image: url('/img/btn_profile_active.png');
+	}
+
+}
+
+
 .login {
 background-image: url('/img/btn_login_active.png');
 width: 100px;

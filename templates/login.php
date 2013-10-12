@@ -8,6 +8,13 @@
         <div class="ten columns centered text-center">
         
         </div>
+        <input type="text" id="wikipedia" />
+
+        <div class="search output">
+          <ul>
+
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -115,7 +122,7 @@
 
 
 
-<input type="text" id="wikipedia" />
+
 
 
 
