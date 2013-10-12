@@ -85,6 +85,8 @@ $app->post("/", function () use ($app) {
 
     $errors = array();
 
+    // check if password is ok!
+
     if ($email != "daniela.kirsch@helloplugin.de") {
         $errors['email'] = "Email is not found.";
     } else if ($password != "login") {
@@ -115,4 +117,9 @@ $app->get("/profile", $authenticate($app), function () use ($app) {
 });
 
 
+
+
+
 $app->run();
+
+

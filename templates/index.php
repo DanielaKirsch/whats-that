@@ -1,6 +1,12 @@
 <? require 'header.php' ?>
 
-<p>Welcome to my home page for a context sensitive login/logout sample application.</p>
+<div class="row">	
+	<h1 class="lead">Hello</h1>
+	<div class="row">
+		<p>Hello Index!</p>
+	</div>
+</div>
+
 
 <?if (!empty($user)):?>
 <p>Hi <?=$user?>
