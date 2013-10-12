@@ -6,42 +6,18 @@
       <a class="close switch active" gumby-trigger="|#modal1"><i class="icon-cancel"></i></a>
       <div class="row">
         <div class="ten columns centered text-center">
-          <h2>This is a modal.</h2>
-          <p>Gumby modals are easy to make using Toggles &amp; Switches. The <span class="label default">.modal</span> class already has the required styles which you can open and close using Toggles &amp; Switches.</p>
+        
         </div>
       </div>
     </div>
   </div>
-
-
-<div class="row"> 
-  <h1 class="lead">Do you know what these things are?</h1>
-  <div class="row">
-    <span class="thefilter">Select a category:</span>
-
-    <ul id="filters">
-      <li><a href="#" data-filter="*" class="all active">show all</a></li>
-      <li><a href="#" data-filter=".Dogs" class="dogs">Dogs</a></li>
-      <li><a href="#" data-filter=".Cats" class="cats">Cats</a></li>
-      <li><a href="#" data-filter=".Trees" class="trees">Trees</a></li>
-      <li><a href="#" data-filter=".Thing" class="thing">Thing</a></li>
-      <li><a href="#" data-filter=".Tools" class="tools">Tools</a></li>
-      <li><a href="#" data-filter=".Cars" class="cars">Cars</a></li>
-    </ul>
-
-    
-  </div>
-</div>
-
-
-
-<div class="row" id="allpictures"> </div>
-
-
-
-
-<div class="row">
-      <div class="three columns">
+  
+  <div class="modal" id="loginmodal">
+    <div class="content">
+      <a class="close switch active" gumby-trigger="|#modal1"><i class="icon-cancel"></i></a>
+      <div class="row">
+        <div class="ten columns centered text-center">
+          <h2>Login</h2>
             <form action="/" method="POST">
           <ul>
           
@@ -58,15 +34,21 @@
            </li>
           </ul>
         </form>
+        </div>
       </div>
-      <div class="nine columns">
-        
-      </div>
-</div>
+    </div>
+  </div>
 
-<div class="row"> 
+
+  <div class="modal" id="uploadmodal">
+    <div class="content">
+      <a class="close switch active" gumby-trigger="|#modal1"><i class="icon-cancel"></i></a>
+      <div class="row">
+        <div class="ten columns centered text-center">
+        
+        
   <h1 class="lead">Upload your photo</h1>
-  <div class="row">
+  
     
     <form action="/api/upload" method="POST" enctype="multipart/form-data">
     
@@ -98,9 +80,39 @@
       </form>
 
 
+
+
+
+
+        </div>
+      </div>
+    </div>
   </div>
 
+
+<div class="row"> 
+  <h1 class="lead">Do you know what these things are?</h1>
+  <div class="row">
+    <span class="thefilter">Select a category:</span>
+
+    <ul id="filters">
+      <li><a href="#" data-filter="*" class="all active">show all</a></li>
+      <li><a href="#" data-filter=".Dogs" class="dogs">Dogs</a></li>
+      <li><a href="#" data-filter=".Cats" class="cats">Cats</a></li>
+      <li><a href="#" data-filter=".Trees" class="trees">Trees</a></li>
+      <li><a href="#" data-filter=".Thing" class="thing">Thing</a></li>
+      <li><a href="#" data-filter=".Tools" class="tools">Tools</a></li>
+      <li><a href="#" data-filter=".Cars" class="cars">Cars</a></li>
+    </ul>
+
+    
+  </div>
 </div>
+
+
+
+<div class="row" id="allpictures"> </div>
+
 
 
 <input type="text" id="wikipedia" />

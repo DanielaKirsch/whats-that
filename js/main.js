@@ -45,7 +45,7 @@ Gumby.ready(function() {
 
 			string = '<div class="element '+data[i]['category']+' '+tagged+'"><a href="#" class="modal1"><img src="upload/'+data[i]['url']+'"></a><div class="title">'+data[i]['title']+'</div></div>';
 
-			$('#allpictures').append(string);
+			$('#allpictures').prepend(string);
 		}
 		
 		createIsotope();
@@ -68,6 +68,26 @@ Gumby.ready(function() {
     	$('.modal').css('opacity',0);
     	$('.modal').css('z-index','-999999');
     	$('.modal .content').css('opacity',0);
+	});
+
+
+    
+	 $('.uploadpicture').click(function(event) {
+  		event.preventDefault();
+  		
+  		$('#uploadmodal').css('opacity',1);
+  		$('#uploadmodal').css('z-index','999');
+  		$('#uploadmodal .content').css('opacity',1);
+  		
+	});
+
+	 $('.login').click(function(event) {
+  		event.preventDefault();
+  		
+  		$('#loginmodal').css('opacity',1);
+  		$('#loginmodal').css('z-index','999');
+  		$('#loginmodal .content').css('opacity',1);
+  		
 	});
 
 

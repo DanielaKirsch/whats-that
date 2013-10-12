@@ -60,7 +60,7 @@
                      <div><a href="/logout">Logout</a></div>
               <?php }
             ?>
-            <a href="#">
+            <a href="/">
                <img src="/img/logo.png" class="mylogo">
             </a>
       

@@ -32,7 +32,7 @@ $app->get("/register", function () use ($app) {
 $app->get("/logout", function () use ($app) {
    unset($_SESSION['user']);
    $app->view()->setData('user', null);
-   $app->render('logout.php');
+   $app->render('login.php');
 });
 
 $app->get("/", function () use ($app) {

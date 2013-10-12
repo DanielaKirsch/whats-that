@@ -2632,7 +2632,12 @@ span.thefilter { float: left; margin-top: 22px; margin-right: 40px; }
 #filters .cars { background-image: url("/img/btn_category_tools_inactive.png"); }
 #filters .cars:hover, #filters .cars.active { background-image: url("/img/btn_category_tools_active.png"); }
 
+.uploadpicture { background-image: url("/img/btn_upload_inactive_kleiner.png"); width: 256px; height: 50px; float: right; margin-top: -50px; }
+.uploadpicture:hover { background-image: url("/img/btn_upload_active_kleiner.png"); }
+
 .uploadfooter { position: fixed; left: 0px; bottom: 0px; height: 75px; width: 100%; background: #ccd46a; z-index: 9999; }
+
+.newlead { margin: 8px 0 5px 0; }
 
 .searchfield a { background-color: #0b5264; border-color: #0b5264; }
 
@@ -2640,3 +2645,12 @@ span.thefilter { float: left; margin-top: 22px; margin-right: 40px; }
 
 .searchfield { width: 290px; float: right; }
 .searchfield input { margin-top: 30px !important; margin-left: 50px !important; }
+
+.isotope, .isotope .isotope-item { /* change duration value to whatever you like */ -webkit-transition-duration: 0.8s; -moz-transition-duration: 0.8s; -ms-transition-duration: 0.8s; -o-transition-duration: 0.8s; transition-duration: 0.8s; }
+
+.isotope { -webkit-transition-property: height, width; -moz-transition-property: height, width; -ms-transition-property: height, width; -o-transition-property: height, width; transition-property: height, width; }
+
+.isotope .isotope-item { -webkit-transition-property: -webkit-transform, opacity; -moz-transition-property: -moz-transform, opacity; -ms-transition-property: -ms-transform, opacity; -o-transition-property: -o-transform, opacity; transition-property: transform, opacity; }
+
+/**** disabling Isotope CSS3 transitions ****/
+.isotope.no-transition, .isotope.no-transition .isotope-item, .isotope .isotope-item.no-transition { -webkit-transition-duration: 0s; -moz-transition-duration: 0s; -ms-transition-duration: 0s; -o-transition-duration: 0s; transition-duration: 0s; }
