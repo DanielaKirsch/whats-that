@@ -2688,7 +2688,7 @@ span.thefilter { float: left; margin-top: 22px; margin-right: 40px; }
 
 .whatisit { margin-bottom: 20px; }
 
-.modal > .content { width: 900px; }
+.modal > .content { width: 900px; top: 5%; max-height: 75%; }
 
 #modal1 h1, #modal1 h2 { font-family: 'Asap', sans-serif; font-size: 22px; font-weight: bold; margin-bottom: 10px; }
 
@@ -2698,8 +2698,14 @@ span.thefilter { float: left; margin-top: 22px; margin-right: 40px; }
 
 #result img { display: none; }
 
-#result { width: 380px; float: left; max-height: 290px; overflow: hidden; font-family: 'Asap', sans-serif; }
+#result { width: 380px; float: left; max-height: 290px; overflow: hidden; font-family: 'Asap', sans-serif; background-color: #43d8da; color: #fff; }
+#result .wrap { padding: 7px; }
+#result a { color: #fff; text-decoration: underline; }
 
 #result table { display: none; }
 
 #modal1 .ten .title { font-family: 'Asap', sans-serif; color: #f63838; font-size: 22px; font-weight: bold; }
+
+.tt_headline span { color: #43d8da; }
+
+.wrap h1 { color: #FFF; }

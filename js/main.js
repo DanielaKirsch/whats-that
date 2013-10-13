@@ -82,7 +82,8 @@ $.getJSON(url,function(data){
   console.log(wikiHTML);
   $wikiDOM = $("<document>"+wikiHTML+"</document>");
   $("#result").append($wikiDOM.html());
-
+	$("#result").wrapInner("<div class='wrap'></div>");
+	$("#result .wrap").prepend('<h1>From wikipedia the free encyclopedia</h1>');
   //$("#result").append(wikiHTML);
 });
 
@@ -114,13 +115,23 @@ $.getJSON(url,function(data){
 		$('#modal1 .centered').append($(this).find('img').clone());
 		//$('#modal1 .centered .title').wrap('<div class="thinksthat"></div>');
 		//$('#modal1 .centered .title').prepend('<h1>Daniela thinks this is </h1>');
+		$('.tt_headline').html('Do you know what this is?');
+		$('.know-the-answer').text('Yes, I know the answer');
 
 		$('#tagged_pid').attr('value',$(this).parent().find('.my_pid').text());
 
-		if($(this).parent().find('.my_pid').text() != '') {
+		if($(this).parent().find('.title').text() != '') {
 			$('#result').empty();
 			// get wikipedia article
+			
+
+			$('.know-the-answer').text('You know it better?');
+
+			the_text = $('#modal1 .centered .title').text();
+			$('.tt_headline').html('<span>Daniela</span> thinks this is a <span>'+the_text+'</span>');
+			$('#modal1 .centered .title').hide();
 			getWikipediaArticle();
+
 		}
 
 	});

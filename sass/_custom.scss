@@ -363,6 +363,8 @@ border-bottom: 1px solid lightgray;
 
 .modal > .content {
 	width: 900px;
+	top: 5%;
+	max-height: 75%;
 }
 
 #modal1 h1, #modal1 h2{
@@ -391,7 +393,20 @@ float: left;
 max-height: 290px;
 overflow: hidden;
 font-family: 'Asap', sans-serif;
+background-color: #43d8da;
+color: #fff;
+	
+	.wrap {
+		padding: 7px;
+	}
+
+	a {
+		color: #fff;
+		text-decoration: underline;
+	}
 }
+
+
 
 #result table {
 	display: none;
@@ -403,4 +418,12 @@ color: #f63838;
 font-size: 22px;
 font-weight: bold;
 
+}
+
+.tt_headline span {
+	color: #43d8da;
+}
+
+.wrap h1 {
+	color: #FFF;
 }

@@ -17,7 +17,7 @@
       <a class="close switch active" gumby-trigger="|#modal1"><i class="icon-cancel"></i></a>
       <div>
         <div>
-          <h1>Do you know what this is?</h1>
+          <h1 class="tt_headline">Do you know what this is?</h1>
 
         </div>
         <div class="ten columns centered text-center">
@@ -26,7 +26,7 @@
         
 
         <div class="field">
-          <h2>Yes, I know the answer</h2>
+          <h2 class="know-the-answer">Yes, I know the answer</h2>
             <input type="text" id="wikipedia" class="text input" />
             
             <form action="/api/updatePicture" method="POST">
