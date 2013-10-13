@@ -16,10 +16,15 @@
     <div class="content">
       <a class="close switch active" gumby-trigger="|#modal1"><i class="icon-cancel"></i></a>
       <div>
+        <div>
+          <h1>Do you know what this is?</h1>
+
+        </div>
         <div class="ten columns centered text-center">
-        
+          
         </div>
         <div class="field">
+          <h2>Yes, I know the answer</h2>
             <input type="text" id="wikipedia" class="text input" />
         </div>
         <div class="search output">

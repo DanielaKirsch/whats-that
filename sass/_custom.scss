@@ -281,20 +281,25 @@ margin-top: 34px;
 #modal1 img {
 	width: 430px;
 	height: 430px;
-	margin-right: 10px;
+	margin-right: 20px;
 }
 
 #wikipedia {
-	width: 240px;
+	width: 300px;
+	border: 2px solid #c4d9de;
 }
 
 .search.output {
 	display: block;
-width: 235px;
-margin-right: 35px;
+width: 300px;
+margin-right: 95px;
 float: right;
-border: 1px solid gray;
-padding: 5px 20px;
+	
+	ul {
+		border: 1px solid #c4d9de;
+		padding: 5px 20px;
+		display: none;
+	}
 
 	li {
 		padding-bottom: 0.5em;
@@ -321,4 +326,24 @@ border-bottom: 1px solid lightgray;
 
 .whatisit {
 	margin-bottom:20px;
+}
+
+.modal > .content {
+	width: 900px;
+}
+
+#modal1 h1, #modal1 h2{
+	
+	font-family: 'Asap', sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+#modal1 .columns.ten {
+	margin-left: 0;
+}
+
+#modal1 h2 {
+	color: #0b5264;
+	font-size: 18px;
 }

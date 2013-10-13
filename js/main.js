@@ -23,7 +23,7 @@ Gumby.ready(function() {
 	                'search': request.term
 	            },
 	            success: function(data) {
-	               
+	               asOutput.show();
 	                asOutput.empty();
 			            	asOutputLayer.addClass('active');
 			            	
@@ -50,6 +50,7 @@ Gumby.ready(function() {
 	    dataType: "json"
 	}).success(function(data){
 		
+
 		
 		for (var i=0;i<data.length;i++) {
 
@@ -73,12 +74,12 @@ Gumby.ready(function() {
 	$( "#allpictures" ).on( "click", "a", function(event) {
   		event.preventDefault();
 
-  		$('#'+$(this).attr('class')).css('opacity',1);
-  		$('#'+$(this).attr('class')).css('z-index','999');
-  		$('#'+$(this).attr('class')+' .content').css('opacity',1);
-  		$('.modal .centered').empty();
-		$('.modal .centered').append($(this).find('img').clone());
-		$('.modal .centered').append($(this).parent().find('.title').clone());
+  		$('#modal1').css('opacity',1);
+  		$('#modal1').css('z-index','999');
+  		$('#modal1 .content').css('opacity',1);
+  		$('#modal1 .centered').empty();
+		$('#modal1 .centered').append($(this).find('img').clone());
+		$('#modal1 .centered').append($(this).parent().find('.title').clone());
 	});
 	 
     $( "html" ).on( "click", ".close", function(event) {  
