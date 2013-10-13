@@ -289,6 +289,39 @@ margin-top: 34px;
 	border: 2px solid #c4d9de;
 }
 
+.some_text, .wikipedia-tag .the_value {
+	display: inline-block;
+	float: left;
+	font-family: 'Asap', sans-serif;
+	color: #0b5264;
+	font-weight: bold;
+	font-size: 20px;
+	margin-left: 7px;
+}
+.some_text {
+	margin-bottom: 10px;
+}
+.wikipedia-tag .the_value {
+	color: #f63838;
+}
+
+.wikipedia-tag {
+	margin-top: 20px;
+	.yeah {
+		cursor: pointer;
+		height: 26px;
+		width: 84px;
+		text-indent: -9999px;
+		background-image: url('/img/btn_yeah_inactive.png');
+		&:hover, &.active {
+			background-image: url('/img/btn_yeah_active.png');
+		
+		}
+
+	}
+
+}
+
 .search.output {
 	display: block;
 width: 300px;
@@ -346,4 +379,28 @@ border-bottom: 1px solid lightgray;
 #modal1 h2 {
 	color: #0b5264;
 	font-size: 18px;
+}
+
+
+#result img {
+	display: none;
+}
+#result {
+	width: 380px;
+float: left;
+max-height: 290px;
+overflow: hidden;
+font-family: 'Asap', sans-serif;
+}
+
+#result table {
+	display: none;
+}
+
+#modal1 .ten .title {
+font-family: 'Asap', sans-serif;
+color: #f63838;
+font-size: 22px;
+font-weight: bold;
+
 }

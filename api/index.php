@@ -8,7 +8,7 @@ $app = new \Slim\Slim();
 
 $app->get('/pictures', 'getPictures');
 $app->post('/createUser', 'createUser');
-
+$app->post('/updatePicture', 'updatePicture');
 $app->post('/upload', 'uploadFile');
 
 $app->run();
@@ -29,6 +29,28 @@ function getPictures() {
 	}
 }
 
+function updatePicture() {
+
+   $app1 = \Slim\Slim::getInstance();
+   $request = $app1->request();
+    
+    $pid = $request->post('tagged_pid');
+    $title = $request->post('tagged_title');
+   
+    $sql = "UPDATE pictures SET title='".$title."' WHERE pid=".$pid;
+print $sql;
+  try {
+    $db = getConnection();
+    $stmt = $db->prepare($sql);  
+    $stmt->execute();
+    $db = null;
+    $app1->redirect('/');
+
+  } catch(PDOException $e) {
+    
+    echo '{"error":{"text":'. $e->getMessage() .'}}'; 
+  }
+}
 
 function createUser() {
 

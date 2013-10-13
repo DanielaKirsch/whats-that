@@ -61,7 +61,7 @@ Gumby.ready(function() {
 				tagged = 'tagged';
 			}
 
-			string = '<div class="element '+data[i]['category']+' '+tagged+'"><a href="#" class="modal1"><img src="upload/'+data[i]['url']+'"></a><div class="title">'+data[i]['title']+'</div></div>';
+			string = '<div class="element '+data[i]['category']+' '+tagged+'"><a href="#" class="modal1"><img src="upload/'+data[i]['url']+'"></a><div class="title">'+data[i]['title']+'</div><div class="my_pid">'+data[i]['pid']+'</div></div>';
 
 			$('#allpictures').prepend(string);
 		}
@@ -71,6 +71,37 @@ Gumby.ready(function() {
 	});
 
 
+	function getWikipediaArticle() {
+		//http://en.wikipedia.org/w/api.php?format=json&action=query&titles=cat&prop=revisions&rvprop=content
+
+		var searchTerm= $('#modal1 .ten .title').text();
+var url="http://en.wikipedia.org/w/api.php?action=parse&format=json&page=" + searchTerm+"&redirects&prop=text&callback=?";
+$.getJSON(url,function(data){
+	
+  wikiHTML = data.parse.text["*"];
+  console.log(wikiHTML);
+  $wikiDOM = $("<document>"+wikiHTML+"</document>");
+  $("#result").append($wikiDOM.html());
+
+  //$("#result").append(wikiHTML);
+});
+
+
+// $.getJSON("http://en.wikipedia.org/w/api.php?action=parse&amp;format=json&amp;callback=?", {page:pageName, prop:"text"}, wikipediaHTMLResult);
+// 		$.ajax({
+// 		    url: "http://en.wikipedia.org/w/api.php?format=json&action=query&titles=cat&prop=revisions&rvprop=content&rvsection=0",
+// 		    dataType: "jsonp"
+// 		}).success(function(data){
+			
+// 			console.log(data['query']['pages']);
+			
+			
+
+// 		});
+
+	}
+
+
 	$( "#allpictures" ).on( "click", "a", function(event) {
   		event.preventDefault();
 
@@ -78,8 +109,20 @@ Gumby.ready(function() {
   		$('#modal1').css('z-index','999');
   		$('#modal1 .content').css('opacity',1);
   		$('#modal1 .centered').empty();
+  		$('#result').empty();
+  		$('#modal1 .centered').append($(this).parent().find('.title').clone());
 		$('#modal1 .centered').append($(this).find('img').clone());
-		$('#modal1 .centered').append($(this).parent().find('.title').clone());
+		//$('#modal1 .centered .title').wrap('<div class="thinksthat"></div>');
+		//$('#modal1 .centered .title').prepend('<h1>Daniela thinks this is </h1>');
+
+		$('#tagged_pid').attr('value',$(this).parent().find('.my_pid').text());
+
+		if($(this).parent().find('.my_pid').text() != '') {
+			$('#result').empty();
+			// get wikipedia article
+			getWikipediaArticle();
+		}
+
 	});
 	 
     $( "html" ).on( "click", ".close", function(event) {  
@@ -116,25 +159,6 @@ Gumby.ready(function() {
   		$('#modalbadges .content').css('opacity',1);
   		
 	});
-
-
-	// $("#artist").autocomplete({
-	//     source: function(request, response) {
-	//         console.log(request.term);
-	//         $.ajax({
-	//             url: "http://dev-.php",
-	//             dataType: "jsonp",
-	//             data: {
-	//                 'action': "opensearch",
-	//                 'format': "json",
-	//                 'search': request.term
-	//             },
-	//             success: function(data) {
-	//                 response(data[1]);
-	//             }
-	//         });
-	//     }
-	// });
 	
 	function createIsotope() {
 			// cache container
@@ -154,6 +178,28 @@ Gumby.ready(function() {
 			});
 
 	}
+
+	$('.wikipedia-tag').hide();
+
+	$( "html" ).on( "click", ".search.output li", function(event) { 
+		event.preventDefault();
+    	
+    	tag = $(this).find('a').attr('title');
+
+    	$('.wikipedia-tag').show();
+    	$('.wikipedia-tag .the_value').empty();
+    	$('.wikipedia-tag .the_value').append(tag);
+
+    	$('#tagged_title').attr('value', tag);
+
+
+		$('.search.output ul').hide();
+
+	});
+
+
+
+
 
 
 	// placeholder polyfil

@@ -23,15 +23,34 @@
         <div class="ten columns centered text-center">
           
         </div>
+        
+
         <div class="field">
           <h2>Yes, I know the answer</h2>
             <input type="text" id="wikipedia" class="text input" />
+            
+            <form action="/api/updatePicture" method="POST">
+            <div class="wikipedia-tag">
+              <div class="some_text">Is this a</div>
+                    <div class="the_value"></div>
+                    <div class="some_text">?</div>
+                    <input type="hidden" name="tagged_pid" id="tagged_pid" value="" />
+                    <input type="hidden" name="tagged_title" id="tagged_title" value="" />
+                 <div class="clear"></div>
+                    <input type="submit" value="Yeah!" class="yeah" />
+
+               
+                    
+            </div>
+             </form>
         </div>
         <div class="search output">
           <ul>
 
           </ul>
         </div>
+        <div id="result"></div>
+
       </div>
     </div>
   </div>
